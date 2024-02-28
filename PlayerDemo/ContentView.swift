@@ -32,20 +32,13 @@ struct ContentView: View {
                     VideoPlayer(player: playerOne)
                         .frame(width: proxy.size.width, height: proxy.size.width * 9 / 16)
                         .onAppear() {
-                            
-                            
-                            
-                            
                             playerOne.isMuted = true
-                            playerOne.seek(to: CMTime(seconds: 30, preferredTimescale: 1000))
-                            playerOne.play()
+                            
                         }
                     VideoPlayer(player: playerTwo)
                         .frame(width: proxy.size.width, height: proxy.size.width * 9 / 16)
                         .onAppear() {
                             playerTwo.isMuted = true
-                            playerTwo.seek(to: CMTime(seconds: 30, preferredTimescale: 1000))
-                            playerTwo.play()
                         }
                 }.task {
                     do {
